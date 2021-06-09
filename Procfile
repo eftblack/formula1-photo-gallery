@@ -1,1 +1,1 @@
-web: web: gunicorn formula1-photo-gallery.wsgi
+web: gunicorn formula1-photo-gallery.wsgi
