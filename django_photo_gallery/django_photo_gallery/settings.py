@@ -59,7 +59,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'django_photo_gallery.wsgi.application'
+WSGI_APPLICATION = 'formula1-photo-gallery.wsgi.application'
 
 DATABASES = {
     'default': {
