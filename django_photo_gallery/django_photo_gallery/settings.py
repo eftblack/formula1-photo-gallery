@@ -1,4 +1,5 @@
 import os
+import django_heroku
 #import posixpath
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
@@ -8,7 +9,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '8ace3072-47a0-4910-b522-dc3601f38c35'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['0.0.0.0','127.0.0.1','localhost']
 INTERNAL_IPS = ('0.0.0.0','127.0.0.1','localhost',)
@@ -104,6 +105,9 @@ STATIC_URL = '/static/'
 # python manage.py collectstatic
 #STATIC_ROOT = posixpath.join(*(BASE_DIR.split(os.path.sep) + ['static/']))
 STATIC_ROOT = BASE_DIR + '/static/'
+
+# Activate Django-Heroku.
+django_heroku.settings(locals())
 
 MEDIA_URL = '/media/'
 #MEDIA_ROOT = posixpath.join(*(BASE_DIR.split(os.path.sep) + ['media/']))
